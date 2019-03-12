@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+    compileSdkVersion versions.sdk.compile
+
+    defaultConfig {
+
+        applicationId "za.co.williewikkelspies.minotaur"
+
+        minSdkVersion versions.sdk.min
+        targetSdkVersion versions.sdk.target
+
+        versionCode versions.versionCode()
+        versionName versions.versionName()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+
+        debug {
+
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':domain')
+    implementation project(':data')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.framework.kotlin}"
+
+    implementation "androidx.appcompat:appcompat:${versions.libraries.appCompat}"
+    implementation "androidx.core:core-ktx:${versions.libraries.coreKtx}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.libraries.constraintLayout}"
+
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:${versions.libraries.leakCanary}"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${versions.libraries.leakCanary}"
+    debugImplementation "com.squareup.leakcanary:leakcanary-support-fragment:${versions.libraries.leakCanary}"
+
+    androidTestImplementation "androidx.test:runner:${versions.libraries.testRunner}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${versions.libraries.espressoCore}"
+}
