@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
 
@@ -54,6 +55,12 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${versions.libraries.appCompat}"
     implementation "androidx.core:core-ktx:${versions.libraries.coreKtx}"
     implementation "androidx.constraintlayout:constraintlayout:${versions.libraries.constraintLayout}"
+
+    kapt "androidx.lifecycle:lifecycle-compiler:${versions.libraries.lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-extensions:${versions.libraries.lifecycle}"
+
+    implementation "org.kodein.di:kodein-di-generic-jvm:${versions.libraries.kodein}"
+    implementation "org.kodein.di:kodein-di-framework-android-x:${versions.libraries.kodein}"
 
     debugImplementation "com.squareup.leakcanary:leakcanary-android:${versions.libraries.leakCanary}"
     releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${versions.libraries.leakCanary}"

@@ -1,12 +1,11 @@
-package za.co.williewikkelspies.minotaur.presentation
+package za.co.williewikkelspies.minotaur
 
-import android.app.Application
 import android.os.StrictMode
 import com.squareup.leakcanary.LeakCanary
-import za.co.williewikkelspies.minotaur.BuildConfig
+import za.co.williewikkelspies.minotaur.di.KodeinApp
 
 
-class MinotaurApplication : Application() {
+class App : KodeinApp() {
 
     override fun onCreate() {
         configureStrictMode()
