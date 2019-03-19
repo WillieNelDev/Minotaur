@@ -1,4 +1,4 @@
-package za.co.williewikkelspies.minotaur.presentation.base
+package za.co.williewikkelspies.minotaur.ui.base
 
 import androidx.appcompat.app.AppCompatActivity
 import za.co.williewikkelspies.minotaur.R

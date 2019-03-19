@@ -1,4 +1,4 @@
-package za.co.williewikkelspies.minotaur.presentation.base.factory
+package za.co.williewikkelspies.minotaur.ui.base.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

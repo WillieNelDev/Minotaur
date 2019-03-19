@@ -1,9 +1,9 @@
-package za.co.williewikkelspies.minotaur.presentation
+package za.co.williewikkelspies.minotaur.ui
 
 import android.os.Bundle
 import za.co.williewikkelspies.minotaur.R
-import za.co.williewikkelspies.minotaur.presentation.base.BaseActivity
-import za.co.williewikkelspies.minotaur.presentation.sms.list.SmsListFragment
+import za.co.williewikkelspies.minotaur.ui.base.BaseActivity
+import za.co.williewikkelspies.minotaur.ui.sms.list.SmsListFragment
 
 class MainActivity : BaseActivity() {
 

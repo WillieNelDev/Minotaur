@@ -1,4 +1,4 @@
-package za.co.williewikkelspies.minotaur.presentation.base
+package za.co.williewikkelspies.minotaur.ui.base
 
 import androidx.fragment.app.Fragment
 

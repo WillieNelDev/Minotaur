@@ -5,7 +5,7 @@ import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.singleton
 import org.kodein.di.weakReference
-import za.co.williewikkelspies.minotaur.presentation.base.factory.ViewModelFactory
+import za.co.williewikkelspies.minotaur.ui.base.factory.ViewModelFactory
 
 val factoryModule = Kodein.Module("factoryModule") {
 

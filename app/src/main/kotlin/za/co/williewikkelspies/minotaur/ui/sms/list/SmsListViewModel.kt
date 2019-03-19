@@ -1,4 +1,4 @@
-package za.co.williewikkelspies.minotaur.presentation.sms.list
+package za.co.williewikkelspies.minotaur.ui.sms.list
 
 import androidx.lifecycle.ViewModel
 
