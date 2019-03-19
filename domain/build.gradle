@@ -1,3 +1,4 @@
+apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 sourceSets {
@@ -10,6 +11,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.framework.kotlin}"
+
+    api "io.reactivex.rxjava2:rxjava:${versions.libraries.rxJava}"
+    api "io.reactivex.rxjava2:rxandroid:${versions.libraries.rxAndroid}"
 
     testImplementation "junit:junit:${versions.libraries.jUnit}"
 }
